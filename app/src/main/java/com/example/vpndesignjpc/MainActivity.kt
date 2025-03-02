@@ -19,29 +19,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             VPNDesignJPCTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+                VPNHomeScreen()
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    VPNDesignJPCTheme {
-        Greeting("Android")
     }
 }
